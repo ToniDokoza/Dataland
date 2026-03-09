@@ -144,6 +144,7 @@ export default defineComponent({
           onLoad: 'check-sso',
           silentCheckSsoRedirectUri: globalThis.location.origin + '/static/silent-check-sso.html',
           pkceMethod: 'S256',
+          checkLoginIframe: false,
         })
         .then((authenticated) => {
           this.keycloakAuthenticated = authenticated;
